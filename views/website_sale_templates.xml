@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Ficha del Producto en la Tienda Online: Mostrar Logo / Badge de Marca -->
+    <template id="product_brand_website_sale_product" inherit_id="website_sale.product" name="Product Brand on Product Page">
+        <xpath expr="//div[@id='product_details']//h1" position="before">
+            <t t-if="product.brand_id">
+                <div class="product-brand-wrapper mb-2">
+                    <a t-attf-href="/shop?brand=#{product.brand_id.id}" 
+                       t-attf-title="Ver más productos de #{product.brand_id.name}" 
+                       class="d-inline-flex align-items-center text-decoration-none">
+                        <t t-if="product.brand_id.logo">
+                            <img t-attf-src="/web/image/product.brand/#{product.brand_id.id}/logo" 
+                                 t-att-alt="product.brand_id.name" 
+                                 class="img img-fluid me-2" 
+                                 style="max-height: 40px; max-width: 130px; object-fit: contain;"/>
+                        </t>
+                        <t t-else="">
+                            <span class="badge text-bg-light border px-2 py-1 text-dark fs-6 fw-semibold">
+                                <i class="fa fa-tag me-1 text-muted"/>
+                                <span t-out="product.brand_id.name"/>
+                            </span>
+                        </t>
+                    </a>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Catálogo de la Tienda: Indicador de Filtro de Marca Activo -->
+    <template id="product_brand_website_sale_products" inherit_id="website_sale.products" name="Active Brand Filter in Shop">
+        <xpath expr="//div[hasclass('o_wsale_products_main_row')]" position="before">
+            <t t-if="active_brand">
+                <div class="col-12 mb-3">
+                    <div class="alert alert-light border d-flex justify-content-between align-items-center py-2 px-3 m-0 shadow-sm rounded">
+                        <div class="d-flex align-items-center">
+                            <t t-if="active_brand.logo">
+                                <img t-attf-src="/web/image/product.brand/#{active_brand.id}/logo" 
+                                     t-att-alt="active_brand.name" 
+                                     class="img img-fluid me-2" 
+                                     style="max-height: 30px; max-width: 90px; object-fit: contain;"/>
+                            </t>
+                            <span>
+                                Productos de la marca: <strong><t t-out="active_brand.name"/></strong>
+                            </span>
+                        </div>
+                        <a href="/shop" class="btn btn-sm btn-outline-secondary" title="Quitar filtro de marca">
+                            <i class="fa fa-times me-1"/> Limpiar filtro
+                        </a>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

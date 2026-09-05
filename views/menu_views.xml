@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Menú en Ventas -> Productos -> Marcas -->
+    <menuitem id="menu_product_brand_sale"
+              name="Brands"
+              action="action_product_brand"
+              parent="sale.product_menu_catalog"
+              sequence="30"/>
+
+    <!-- Menú en Inventario -> Productos -> Marcas -->
+    <menuitem id="menu_product_brand_stock"
+              name="Brands"
+              action="action_product_brand"
+              parent="stock.menu_product_in_config_stock"
+              sequence="30"/>
+
+    <!-- Menú en Sitio Web -> Comercio Electrónico -> Marcas -->
+    <menuitem id="menu_product_brand_website_sale"
+              name="Brands"
+              action="action_product_brand"
+              parent="website_sale.menu_catalog_products"
+              sequence="30"/>
+
+</odoo>
