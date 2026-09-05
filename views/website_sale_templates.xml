@@ -2,8 +2,8 @@
 <odoo>
 
     <!-- Ficha del Producto en la Tienda Online: Mostrar Logo / Badge de Marca -->
-    <template id="product_brand_website_sale_product" inherit_id="website_sale.product" name="Product Brand on Product Page">
-        <xpath expr="//div[@id='product_details']//h1" position="before">
+    <template id="product_brand_website_sale_product_title" inherit_id="website_sale.product_title" name="Product Brand on Product Page">
+        <xpath expr="//h1" position="before">
             <t t-if="product.brand_id">
                 <div class="product-brand-wrapper mb-2">
                     <a t-attf-href="/shop?brand=#{product.brand_id.id}" 
