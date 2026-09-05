@@ -3,10 +3,11 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
 
 import base64
-from odoo.tests.common import TransactionCase
+from odoo.tests.common import TransactionCase, tagged
 from odoo.exceptions import ValidationError
 
 
+@tagged('post_install', '-at_install')
 class TestProductBrand(TransactionCase):
     """Pruebas unitarias para el modelo product.brand y su integración con productos."""
 
