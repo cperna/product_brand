@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Ficha del Producto en la Tienda Online: Mostrar Logo / Badge de Marca -->
+    <!-- Ficha del Producto en la Tienda Online: Mostrar Logo / Badge de Marca Estilizado -->
     <template id="product_brand_website_sale_product_title" inherit_id="website_sale.product_title" name="Product Brand on Product Page">
         <xpath expr="//h1" position="before">
             <t t-if="product.brand_id">
-                <div class="product-brand-wrapper mb-2">
-                    <a t-attf-href="/shop?brand=#{product.brand_id.id}" 
-                       t-attf-title="Ver más productos de #{product.brand_id.name}" 
-                       class="d-inline-flex align-items-center text-decoration-none">
-                        <t t-if="product.brand_id.logo">
-                            <img t-attf-src="/web/image/product.brand/#{product.brand_id.id}/logo" 
-                                 t-att-alt="product.brand_id.name" 
-                                 class="img img-fluid me-2" 
-                                 style="max-height: 40px; max-width: 130px; object-fit: contain;"/>
-                        </t>
-                        <t t-else="">
-                            <span class="badge text-bg-light border px-2 py-1 text-dark fs-6 fw-semibold">
-                                <i class="fa fa-tag me-1 text-muted"/>
-                                <span t-out="product.brand_id.name"/>
-                            </span>
-                        </t>
-                    </a>
+                <div class="product-brand-header mb-3">
+                    <div class="d-inline-flex align-items-center flex-wrap gap-2">
+                        <a t-attf-href="/shop?brand=#{product.brand_id.id}" 
+                           t-attf-title="Ver catálogo de #{product.brand_id.name}" 
+                           class="d-inline-flex align-items-center text-decoration-none">
+                            <t t-if="product.brand_id.logo">
+                                <div class="brand-logo-badge bg-white border rounded-3 p-2 shadow-sm d-inline-flex align-items-center justify-content-center"
+                                     style="min-height: 48px; max-height: 58px; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                                    <img t-attf-src="/web/image/product.brand/#{product.brand_id.id}/logo" 
+                                         t-att-alt="product.brand_id.name" 
+                                         class="img img-fluid" 
+                                         style="max-height: 46px; max-width: 155px; width: auto; height: auto; object-fit: contain;"/>
+                                </div>
+                            </t>
+                            <t t-else="">
+                                <span class="badge text-bg-light border px-3 py-2 text-dark fs-6 fw-semibold rounded-pill shadow-sm">
+                                    <i class="fa fa-tag me-2 text-primary"/>
+                                    <span t-out="product.brand_id.name"/>
+                                </span>
+                            </t>
+                        </a>
+                        <a t-attf-href="/shop?brand=#{product.brand_id.id}" 
+                           class="btn btn-link btn-sm text-decoration-none text-muted p-0 ms-1 d-inline-flex align-items-center"
+                           style="font-size: 0.85rem;"
+                           t-attf-title="Explorar todos los productos de #{product.brand_id.name}">
+                            <span>Ver todos los productos de esta marca</span>
+                            <i class="fa fa-chevron-right ms-1 small" style="font-size: 0.7rem;"/>
+                        </a>
+                    </div>
                 </div>
             </t>
         </xpath>
@@ -38,7 +50,7 @@
                                 <img t-attf-src="/web/image/product.brand/#{active_brand.id}/logo" 
                                      t-att-alt="active_brand.name" 
                                      class="img img-fluid me-2" 
-                                     style="max-height: 30px; max-width: 90px; object-fit: contain;"/>
+                                     style="max-height: 32px; max-width: 100px; object-fit: contain;"/>
                             </t>
                             <span>
                                 Productos de la marca: <strong><t t-out="active_brand.name"/></strong>
