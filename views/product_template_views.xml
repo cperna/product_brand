@@ -25,7 +25,7 @@
                 <filter string="With Brand" name="with_brand" domain="[('brand_id', '!=', False)]"/>
                 <separator/>
             </xpath>
-            <xpath expr="//filter[@name='categ_id']" position="after">
+            <xpath expr="//filter[@name='group_by_categ_id']" position="after">
                 <filter string="Brand" name="group_by_brand" context="{'group_by': 'brand_id'}"/>
             </xpath>
         </field>
