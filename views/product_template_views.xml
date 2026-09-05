@@ -21,13 +21,12 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="after">
                 <field name="brand_id" string="Brand"/>
-            </xpath>
-            <xpath expr="//search" position="inside">
                 <separator/>
                 <filter string="With Brand" name="with_brand" domain="[('brand_id', '!=', False)]"/>
-                <group expand="0" string="Group By">
-                    <filter string="Brand" name="group_by_brand" context="{'group_by': 'brand_id'}"/>
-                </group>
+                <separator/>
+            </xpath>
+            <xpath expr="//filter[@name='categ_id']" position="after">
+                <filter string="Brand" name="group_by_brand" context="{'group_by': 'brand_id'}"/>
             </xpath>
         </field>
     </record>

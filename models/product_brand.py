@@ -13,7 +13,6 @@ class ProductBrand(models.Model):
     name = fields.Char(
         string='Brand Name',
         required=True,
-        index=True,
         translate=True,
     )
     logo = fields.Image(
