@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-05 21:00+0000\n"
+"PO-Revision-Date: 2026-09-05 21:00+0000\n"
+"Last-Translator: Carlos Pernalete\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_brand__active
+msgid "Active"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.actions.act_window,name:product_brand.action_product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_product__brand_id
+#: model:ir.model.fields,field_description:product_brand.field_product_template__brand_id
+#: model:ir.ui.menu,name:product_brand.menu_product_brand_sale
+#: model:ir.ui.menu,name:product_brand.menu_product_brand_stock
+#: model:ir.ui.menu,name:product_brand.menu_product_brand_website_sale
+#: model_terms:ir.ui.view,arch_db:product_brand.product_template_search_brand_view
+#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_form
+#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_search
+msgid "Brand"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_brand__name
+msgid "Brand Name"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.ui.menu,name:product_brand.menu_product_brand_sale
+#: model:ir.ui.menu,name:product_brand.menu_product_brand_stock
+#: model:ir.ui.menu,name:product_brand.menu_product_brand_website_sale
+#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_list
+msgid "Brands"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_brand__company_id
+msgid "Company"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_brand__description
+msgid "Description"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_brand__logo
+msgid "Logo"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_brand__product_count
+msgid "Number of Products"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model,name:product_brand.model_product_brand
+msgid "Product Brand"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model,name:product_brand.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model,name:product_brand.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: product_brand
+#: model:ir.model.fields,field_description:product_brand.field_product_brand__product_ids
+#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_form
+msgid "Products"
+msgstr ""
+
+#. module: product_brand
+#. odoo-python
+#: code:addons/product_brand/models/product_brand.py:0
+#, python-format
+msgid "Products - %(brand)s"
+msgstr ""
+
+#. module: product_brand
+#. odoo-python
+#: code:addons/product_brand/models/product_template.py:0
+#, python-format
+msgid "The selected brand \"%(brand)s\" belongs to a different company."
+msgstr ""
+
+#. module: product_brand
+#: model_terms:ir.ui.view,arch_db:product_brand.product_template_search_brand_view
+msgid "With Brand"
+msgstr ""
